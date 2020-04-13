@@ -13,11 +13,7 @@ export class StartPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    localStorage.setItem("password", "asdfasdf");
-    localStorage.setItem("login", "pashaboiko");
-  }
-  showMobileNav() {
-    this.isMobileNavActive = !this.isMobileNavActive;
+    this.isAuthorised = JSON.parse(localStorage.getItem("isAuthorised"));
   }
 
 }

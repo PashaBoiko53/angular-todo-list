@@ -8,6 +8,7 @@ export class NotesDataService {
 
   constructor() { }
 
+
   private get localStorageKey() {
     return 'key';
   }
@@ -22,7 +23,9 @@ export class NotesDataService {
   getNotes(): NoteItem[] {
 
     let items: NoteItem[] = JSON.parse(localStorage.getItem(this.localStorageKey));
-    items = items.filter(d => new Date(d.endingTime) >= new Date());
+    if (items) {
+      items = items.filter(d => new Date(d.endingTime) >= new Date());
+    }
 
     if (items && items.length) {
       for (let index = 0; index < items.length; index++) {
@@ -35,8 +38,9 @@ export class NotesDataService {
     if (!items) {
       return [];
     }
-
-    return items
+    else {
+      return items
+    }
   }
 
   pushNote(newNote: NoteItem) {

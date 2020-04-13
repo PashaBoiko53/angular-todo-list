@@ -17,6 +17,7 @@ export class UserComponent implements OnInit {
   public location;
 
   constructor(private httpService: HttpService) { }
+  
   public isMapActive = false;
 
   ngOnInit() {
@@ -27,7 +28,6 @@ export class UserComponent implements OnInit {
   }
   func(e:string) {
     this.location = e;
-    console.log(this.location);
   }
 
 

@@ -1,10 +1,14 @@
 <div class="container-fluid">
-    <div class="login-menu bg-dark">
+    <div class="login-menu bg-dark row">
+        <span class=" col-md-12" style="margin-bottom: 20px;">Login: pashaboiko, Password: asdfasdf</span>
         <label for="login" class="text-light">Login <br>
-            <input #login name="login" type="text">
+            <input #login name="login" type="text" class="login">
         </label>
         <label for="password" class="text-light">Password <br>
-            <input #password name="password" type="password">
+            <div class="password">
+                <input #password name="password" style="width: 81.5%;" [attr.type]="typeOfPassword">
+                <button (mousedown)="showPassword()" (mouseup)="hidePassword()">Show</button>
+            </div>
         </label>
         <button (click)="authorisation(password.value, login.value)" class="btn btn-light">Submit</button>
     </div>

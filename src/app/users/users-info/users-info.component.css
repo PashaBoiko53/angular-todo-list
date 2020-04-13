@@ -1,8 +1,11 @@
 .lang {
     position: absolute;
     right: 0;
-    top: 1%;
+    top: 9%;
 }
 .lang button {
     margin-right: 20px;
+}
+.container-fluid {
+    padding-top: 4vw;
 }

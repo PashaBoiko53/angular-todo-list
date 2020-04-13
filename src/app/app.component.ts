@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDo-List';
+  public isAuthorised = JSON.parse(localStorage.getItem("isAuthorised"));
 }

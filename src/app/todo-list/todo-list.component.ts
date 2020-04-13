@@ -25,7 +25,7 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit() {
     this.notesList = this.notesData.getNotes();
-    this.notesListAll = this.notesList
+    this.notesListAll = this.notesList;
   }
   createNote(label:string, category:string, endingTime:string) {
     if (label !== "" && endingTime !== "" && category !== "" && !this.notesData.getNotes().some(x => x.label === label)) {
